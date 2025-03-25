@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./goes-removebg-preview.png">
+    </head>
+    <body>
+        <h1>Welcome to the budget thingy</h1>
+        <table>
+            <tr>
+                <td>
+        <label for="dailyDate" class ="balanceInputArea">Date:</label>
+                </td>
+                <td>
+        <input type=date id="dailyDate">
+                </td>
+            </tr>
+            <tr>
+                <td>
+        <label for="balanceInputArea" class="balanceInputArea">Balance: </label>
+                </td>
+                <td>
+        <input type="number" placeholder="Input balance" id="balanceInputArea">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Remaining Today:
+                </td>
+                <td id = 'dailyRemainder'>
+
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <a href="./paycheckSheet.html"><button id="paycheckSheetButton">Go to the paycheck sheet!</button></a>
+
+        <script src="./code.js"></script>
+    </body>
+</html>
