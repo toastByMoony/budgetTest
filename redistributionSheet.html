@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Re-distribution sheet</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./goes-removebg-preview.png">
+    </head>
+    <body id="redBody">
+
+        <h3>Redistribution of stuff</h3>
+        <h4>Fill out the following fields to redistribute!</h4>
+        <br>
+        <div id="redInputs">
+        <div id="redInfoPopUp">
+        <label for="redDate">Date of change: </label>
+        <input type="date" id="redDate">
+        <button id="currentStandings">current</button>
+        <div id ="infoStuff"></div>
+        </div>
+        <label for="redTerm">Term: </label>
+            <select id="redTerm">
+                <optgroup label="Term options">
+                    <option value="auto">Auto</option>
+                    <option value="pickDate">Pick date</option>
+                    <option value="pickDay">Pick days</option>
+                </optgroup>
+                </select>
+                <br>
+                <div id="redTermInput">
+                </div>
+            <br>
+        <label for="redAmount">Starting amount: </label>
+        <input type="number" id="redAmount">
+        <br><br>
+        <label for="redExpendInputs">Add Any Anticipated Expenditures? </label>
+        <input id="redExpendInputs" type="Number">
+        <table id="redExpendFieldsContainer"></table>
+        <br>
+        </div>
+        <label for="redRemainingDisp">Remaining: </label>
+        <textarea id="redRemainingDisp" class="displayBox" readonly></textarea>
+        <br>
+        <label for="redDailyDisp">New daily: </label>
+        <textarea id="redDailyDisp" class="displayBox" readonly></textarea>
+
+
+        <div class="homeButtonContainer">
+        <a href="./index.html"><button class="homeButton">Home</button></a>
+        <a href="./paycheckSheet.html"><button class="homeButton">Paycheck sheet</button></a>
+        <a href="./redistributionSheet.html"><button class="homeButton">Re-distribution sheet</button></a>
+        </div>
+        <script src="./code.js"></script>
+    </body>
+</html>

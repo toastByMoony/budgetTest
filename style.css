@@ -1,0 +1,50 @@
+.homeButtonContainer{
+    position:fixed;
+    bottom:5px;
+    display: flex;
+    justify-content: space-between;
+    width:20%;
+}
+
+.homeButton{
+    width:max-content;
+    margin:0px 2px;
+}
+
+.balanceInputArea{
+    display:inline-block;
+}
+
+.linkButton{
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+#redInfoPopUp{
+    position:relative;
+}
+
+#infoStuff{
+    display:initial;
+    position:absolute;
+    left: 300px;
+    top: 0px;
+    width: 100px;
+    height:70px;
+    z-index: 999999;
+    border-style:solid;
+    border-width:1px;
+    padding:1px;
+    font-size: small;
+}
+
+.redInfoItem{
+    font-size:x-small;
+    padding:1px;
+    line-height: 0%;
+}
+
+.displayBox{
+    height:15px;
+    vertical-align:middle;
+}
