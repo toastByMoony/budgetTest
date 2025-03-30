@@ -117,7 +117,7 @@ if(document.title==="Home page"){
 function setPayTerm(){
     payTerm=findPayTerm();
     console.log(payTerm);
-    document.cookie ="pIPT="+payTerm+"; max-age=31536000; sameSite=Lax; domain="+currentIp;
+    document.cookie ="pIPT="+payTerm+"; max-age=31536000; SameSite=Lax; Secure; domain="+currentIp;
     console.log(document.cookie);
 }
 
@@ -317,13 +317,13 @@ function savePaycheckInfo(){
 
     //date
     console.log(paycheckDate.value);
-    document.cookie="pIDt="+paycheckDate.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie="pIDt="+paycheckDate.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //daily
-    document.cookie="pIDI="+paycheckDaily.innerHTML+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie="pIDI="+paycheckDaily.innerHTML+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //amount
-    document.cookie="pIA="+paycheckAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie="pIA="+paycheckAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //term
-    document.cookie="pIT="+selectedTerm.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie="pIT="+selectedTerm.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
         //custom first value
         let applicableStart;// document.getElementById('customTermDatesStartDate').value || document.getElementById('customTermDaysStartDate').value || "Lax";
         let applicableEnd;
@@ -343,36 +343,36 @@ function savePaycheckInfo(){
         }
 
         //Idk why I named it like this but this is the custom start date
-        document.cookie="pICf="+applicableStart+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pICf="+applicableStart+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
         //custom second value //document.getElementById('customTermDatesEndDate').value || documument.getElementById('customTermDaysDayCount').value || "Lax";
-        document.cookie="pICe="+applicableEnd+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pICe="+applicableEnd+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //long term save
-        document.cookie="pILT="+parseInt(longTermSaveDisplay.innerHTML)+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pILT="+parseInt(longTermSaveDisplay.innerHTML)+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //short term save
-        document.cookie="pIST="+paycheckShortTermAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pIST="+paycheckShortTermAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //debt
-        document.cookie="pID="+paycheckDebt.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pID="+paycheckDebt.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //subscription count
-        document.cookie="pISCu="+subscriptionAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pISCu="+subscriptionAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //subscription names
         let subNames = "";
         for(let i=0;i<parseFloat(subscriptionAmount.value);i++){
             subNames+=(document.getElementById('subscriptionName' + (i+1)).value.trim()+"|");
             console.log(subNames);
         }   
-        document.cookie="pISN="+subNames+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pISN="+subNames+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //subscription costs
         let subCosts = "";
         for(let i=0;i<parseFloat(subscriptionAmount.value); i++){
             subCosts+=(document.getElementById('subscriptionCost'+(i+1)).value.trim()+"|");
             console.log(subCosts);
         }
-        document.cookie="pISCs="+subCosts+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pISCs="+subCosts+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
     //funsies set aside
-        document.cookie="pIF="+funsiesSetAside.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pIF="+funsiesSetAside.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
         //remaining
-        document.cookie="pIR="+remainingDetail.innerHTML+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
-        document.cookie="pITe="+term+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie="pIR="+remainingDetail.innerHTML+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
+        document.cookie="pITe="+term+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax; Secure";
         
         setPayTerm();
 
@@ -445,7 +445,7 @@ function savePaycheckInfo(){
 function updateDailyRemaining(){
     //balance input cookie
     console.log('updating');
-    document.cookie="baI="+balanceInput.value.trim()+"; max-age=31536000; path=/; SameSite=Lax; domain=" + currentIp;
+    document.cookie="baI="+balanceInput.value.trim()+"; max-age=31536000; path=/; SameSite=Lax; Secure; domain=" + currentIp;
     if(cookies.baI!==undefined && cookies.baI!==null && cookies.baI!==""){
     balanceInput.placeholder=cookies.baI;
     } else {
@@ -603,15 +603,15 @@ function saveRedCookies(){
     console.log('saving red cookies');
     //rI--- redistribution info ____ _____
     //startdate
-    document.cookie='rISD='+redDate.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rISD='+redDate.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
     //end setting
-    document.cookie='rITS='+redTermSelect.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rITS='+redTermSelect.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
     //end date/day count
-    document.cookie='rIED='+redEndValue.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rIED='+redEndValue.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
     //starting amount
-    document.cookie='rISA='+redAmount.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rISA='+redAmount.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
     //expenditures
-    document.cookie='rIEI='+redExpendInputs.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rIEI='+redExpendInputs.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
     //expenditure values
     let expNames="";
     let expValues="";
@@ -623,13 +623,13 @@ function saveRedCookies(){
             console.log(expNames);
             console.log(expValues);
         }
-    document.cookie='rIEN='+expNames+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
-    document.cookie='rIEV='+expValues+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rIEN='+expNames+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
+    document.cookie='rIEV='+expValues+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
     //new daily
-    document.cookie='rID='+redDailyDisp.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rID='+redDailyDisp.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
 
     //remaining
-    document.cookie='rIR='+redRemainingDisp.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
+    document.cookie='rIR='+redRemainingDisp.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax; Secure';
 
     let fuck=document.cookie.split(';').reduce((cookies, cookie) => {
         let cookiee=cookie.split('=');
