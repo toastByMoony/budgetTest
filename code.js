@@ -472,7 +472,7 @@ function updateDailyRemaining(){
         
         projectedBlnce=cookies.pIR-amountToSubtract;
     }
-    dailyRemainder.innerHTML=Math.round((parseFloat(balanceInput.value)-projectedBlnce)*100)/100 //|| 'Please input budget information';
+    dailyRemainder.innerHTML=Math.round((parseFloat(balanceInput.value)-projectedBlnce)*100)/100 || 'Please input budget information';
 }
 
 //START OF REDISTRIBUTION PAGE STUFF
