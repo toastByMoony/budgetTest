@@ -1,6 +1,6 @@
 console.log('javascript running');
 console.log(document.title);
-let currentIp='toastbymoony.github.io';
+let currentIp='budgetgoose.xyz';
 //establishing cookies
 let cookies = document.cookie.split(';').reduce((cookies,cookie) => {
     let splitCookies=cookie.split('=');
