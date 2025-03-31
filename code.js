@@ -17,7 +17,7 @@ let paycheckShortTermAmount = document.getElementById('shortTermSaveValue');
 let paycheckDebt = document.getElementById('paycheckDebt');
 let funsiesSetAside = document.getElementById('funsiesSetAside');
 let remainingDetail = document.getElementById('remainingFromPaycheck');
-let paycheckDaily = document.getElementById("paycheckDaily");
+let paycheckDaily = document.getElementById('paycheckDaily');
 let paycheckInputs = document.getElementById('paycheckInputs');
 let subscriptionAmount = document.getElementById('subscriptionAmount');
 let term;
@@ -43,10 +43,10 @@ let redBody = document.getElementById('redBody');
 let redInputs=document.getElementById('redInputs');
 let redRemainingDisp = document.getElementById('redRemainingDisp');
 
-if(document.title==="Home page"){
+if(document.title==='Home page'){
     let datee = new Date()
     .toISOString()
-    .split("T")[0];
+    .split('T')[0];
     console.log(datee);
     dailyDate.value=datee;
     balanceInput.value=cookies.baI;
@@ -55,12 +55,12 @@ if(document.title==="Home page"){
     //index event listeners
     balanceInput.addEventListener('input', updateDailyRemaining);
 
-} else if(document.title==="Paycheck sheet"){
+} else if(document.title==='Paycheck sheet'){
     loadLastSave();
 
     //set up the event listeners
-    paycheckAmount.addEventListener("input", updateLongTerm);
-    selectedTerm.addEventListener("input", showTermOptions);
+    paycheckAmount.addEventListener('input', updateLongTerm);
+    selectedTerm.addEventListener('input', showTermOptions);
     subscriptionAmount.addEventListener('input', updateSubscriptionFields);
     paycheckInputs.addEventListener('input', updateRemaining);
     paycheckInputs.addEventListener('input', savePaycheckInfo);
@@ -98,7 +98,7 @@ if(document.title==="Home page"){
     currentInfo.innerHTML='Current stuff';
     currentInfo.append(curRedDate,curRedBalance,curRedRemainingDays,redPotentialDaily);
 
-    if(cookies.baI!==null&&cookies.baI!==""&&cookies.baI!==undefined){
+    if(cookies.baI!==null&&cookies.baI!==''&&cookies.baI!==undefined){
     currentButton.style.color='black';
     currentButton.addEventListener('mouseover', showRedDetails);
     currentButton.addEventListener('mouseleave', hideRedDetails);
@@ -117,7 +117,7 @@ if(document.title==="Home page"){
 function setPayTerm(){
     payTerm=findPayTerm();
     console.log(payTerm);
-    document.cookie ="pIPT="+payTerm+"; max-age=31536000; SameSite=Lax; domain="+currentIp;
+    document.cookie ='pIPT='+payTerm+'; max-age=31536000; SameSite=Lax; domain='+currentIp;
     console.log(document.cookie);
 }
 
@@ -149,8 +149,8 @@ function showTermOptions(){
             startDateTitle.append(startDateLabel);
             let startDateInput = document.createElement('td');
             let startDateInputField = document.createElement('input');
-            startDateInputField.type="date";
-            startDateInputField.id="customTermDatesStartDate";
+            startDateInputField.type='date';
+            startDateInputField.id='customTermDatesStartDate';
             startDateInputField.value=document.getElementById('datePaid').value;
             startDateInput.append(startDateInputField);
             termStartRow.append(startDateTitle, startDateInput);
@@ -163,12 +163,12 @@ function showTermOptions(){
             endDateTitle.append(endDateLabel);
             let endDateInput = document.createElement('td');
             let endDateInputField=document.createElement('input');
-            endDateInputField.type="date";
-            endDateInputField.id="customTermDatesEndDate";
+            endDateInputField.type='date';
+            endDateInputField.id='customTermDatesEndDate';
             endDateInput.append(endDateInputField);
             termEndRow.append(endDateTitle,endDateInput);
             break;
-        case "customDays":
+        case 'customDays':
 
         //set the start date stuff
             let customStartDateTitle=document.createElement('td');
@@ -178,8 +178,8 @@ function showTermOptions(){
             customStartDateTitle.append(customStartLabel);
             let customStartDateInput = document.createElement('td');
             let customStartDateInputField = document.createElement('input');
-            customStartDateInputField.type="date";
-            customStartDateInputField.id="customTermDaysStartDate";
+            customStartDateInputField.type='date';
+            customStartDateInputField.id='customTermDaysStartDate';
             customStartDateInputField.value=document.getElementById('datePaid').value;
             customStartDateInput.append(customStartDateInputField);
             termStartRow.append(customStartDateTitle,customStartDateInput);
@@ -192,8 +192,8 @@ function showTermOptions(){
         amountOfDaysTitle.append(amountOfDaysLabel);
         let amountOfDaysInput=document.createElement('td');
         let daysInputField=document.createElement('input');
-        daysInputField.type="number";
-        daysInputField.id="customTermDaysDayCount";
+        daysInputField.type='number';
+        daysInputField.id='customTermDaysDayCount';
         amountOfDaysInput.append(daysInputField);
         termEndRow.append(amountOfDaysTitle, amountOfDaysInput);
     }
@@ -208,9 +208,9 @@ function updateSubscriptionFields(){
         //set the name fields
         nameContainer.innerHTML=null;
         for(let i=0;i<amount;i++){
-            let newNameDetail = document.createElement("td");
-            let newNameField = document.createElement("input");
-            newNameField.type="text";
+            let newNameDetail = document.createElement('td');
+            let newNameField = document.createElement('input');
+            newNameField.type='text';
             newNameField.id=`subscriptionName${i+1}`;
             newNameField.placeholder=`Subscription ${i+1} name`;
             newNameDetail.append(newNameField);
@@ -219,9 +219,9 @@ function updateSubscriptionFields(){
         //set the amount fields
         costContainer.innerHTML=null;
         for(let i=0;i<amount;i++){
-            let newAmountDetail = document.createElement("td");
-            let newAmountField = document.createElement("input");
-            newAmountField.type="number";
+            let newAmountDetail = document.createElement('td');
+            let newAmountField = document.createElement('input');
+            newAmountField.type='number';
             newAmountField.id=`subscriptionCost${i+1}`;
             newAmountField.placeholder = `Subscription ${i +1} cost`;
             newAmountDetail.append(newAmountField);
@@ -242,7 +242,7 @@ function updateRemaining(){
     let funsies = parseFloat(funsiesSetAside.value) || 0;
     let remaining = paid - (longSave+shortSave+debt+funsies);
     let subCount = subscriptionAmount.value;
-    if(subCount!==0 && subCount!=="" && subCount!==null && subCount!==undefined){
+    if(subCount!==0 && subCount!=='' && subCount!==null && subCount!==undefined){
     for (let i=0;i<subCount;i++){
         let refSub = parseFloat(document.getElementById('subscriptionCost' + (i+1)).value) || 0;
         remaining-=refSub;
@@ -250,9 +250,9 @@ function updateRemaining(){
 }
 console.log('wtf')
     /*
-console.log("amount paid: " + paid);
-console.log("long term save: " + longSave);
-console.log("short term save: " + shortSave);
+console.log('amount paid: ' + paid);
+console.log('long term save: ' + longSave);
+console.log('short term save: ' + shortSave);
 console.log('debt: ' + debt)
 console.log('funsies: ' + funsies);
 console.log(remaining);
@@ -270,16 +270,16 @@ function calculateDaily(){
     //find term length
     console.log('made it to calculate daily');
     switch(selectedTerm.value){
-        case "twoWeeks":
+        case 'twoWeeks':
             term=14;
         break;
-        case "customDates":
+        case 'customDates':
             let cDtStart = new Date(document.getElementById('customTermDatesStartDate').value);
             let cDtEnd = new Date(document.getElementById('customTermDatesEndDate').value);
             let cDtDayCnt = (cDtEnd.getTime()-cDtStart.getTime())/1000/60/60/24;
             term = cDtDayCnt;
         break;
-        case "customDays":
+        case 'customDays':
             let cDyDayCnt = parseFloat(document.getElementById('customTermDaysDayCount').value);
             term = cDyDayCnt;
         break;
@@ -317,62 +317,62 @@ function savePaycheckInfo(){
 
     //date
     console.log(paycheckDate.value);
-    document.cookie="pIDt="+paycheckDate.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie='pIDt='+paycheckDate.value+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //daily
-    document.cookie="pIDI="+paycheckDaily.innerHTML+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie='pIDI='+paycheckDaily.innerHTML+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //amount
-    document.cookie="pIA="+paycheckAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie='pIA='+paycheckAmount.value+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //term
-    document.cookie="pIT="+selectedTerm.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+    document.cookie='pIT='+selectedTerm.value+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
         //custom first value
-        let applicableStart;// document.getElementById('customTermDatesStartDate').value || document.getElementById('customTermDaysStartDate').value || "Lax";
+        let applicableStart;// document.getElementById('customTermDatesStartDate').value || document.getElementById('customTermDaysStartDate').value || 'Lax';
         let applicableEnd;
         switch(selectedTerm.value){
-            case "twoWeeks":
-                applicableStart="none"
-                applicableEnd="none";
+            case 'twoWeeks':
+                applicableStart='none'
+                applicableEnd='none';
             break;
-            case "customDates":
+            case 'customDates':
                 applicableStart=document.getElementById('customTermDatesStartDate').value;
                 applicableEnd=document.getElementById('customTermDatesEndDate').value;
             break;
-            case "customDays":
+            case 'customDays':
                 applicableStart=document.getElementById('customTermDaysStartDate').value;
                 applicableEnd=document.getElementById('customTermDaysDayCount').value;
             break;
         }
 
         //Idk why I named it like this but this is the custom start date
-        document.cookie="pICf="+applicableStart+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
-        //custom second value //document.getElementById('customTermDatesEndDate').value || documument.getElementById('customTermDaysDayCount').value || "Lax";
-        document.cookie="pICe="+applicableEnd+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pICf='+applicableStart+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
+        //custom second value //document.getElementById('customTermDatesEndDate').value || documument.getElementById('customTermDaysDayCount').value || 'Lax';
+        document.cookie='pICe='+applicableEnd+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //long term save
-        document.cookie="pILT="+parseInt(longTermSaveDisplay.innerHTML)+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pILT='+parseInt(longTermSaveDisplay.innerHTML)+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //short term save
-        document.cookie="pIST="+paycheckShortTermAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pIST='+paycheckShortTermAmount.value+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //debt
-        document.cookie="pID="+paycheckDebt.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pID='+paycheckDebt.value+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //subscription count
-        document.cookie="pISCu="+subscriptionAmount.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pISCu='+subscriptionAmount.value+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //subscription names
-        let subNames = "";
+        let subNames = '';
         for(let i=0;i<parseFloat(subscriptionAmount.value);i++){
-            subNames+=(document.getElementById('subscriptionName' + (i+1)).value.trim()+"|");
+            subNames+=(document.getElementById('subscriptionName' + (i+1)).value.trim()+'|');
             console.log(subNames);
         }   
-        document.cookie="pISN="+subNames+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pISN='+subNames+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //subscription costs
-        let subCosts = "";
+        let subCosts = '';
         for(let i=0;i<parseFloat(subscriptionAmount.value); i++){
-            subCosts+=(document.getElementById('subscriptionCost'+(i+1)).value.trim()+"|");
+            subCosts+=(document.getElementById('subscriptionCost'+(i+1)).value.trim()+'|');
             console.log(subCosts);
         }
-        document.cookie="pISCs="+subCosts+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pISCs='+subCosts+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
     //funsies set aside
-        document.cookie="pIF="+funsiesSetAside.value+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pIF='+funsiesSetAside.value+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
         //remaining
-        document.cookie="pIR="+remainingDetail.innerHTML+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
-        document.cookie="pITe="+term+"; max-age=31536000; domain="+currentIp+"; path=/; SameSite=Lax";
+        document.cookie='pIR='+remainingDetail.innerHTML+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
+        document.cookie='pITe='+term+'; max-age=31536000; domain='+currentIp+'; path=/; SameSite=Lax';
         
         setPayTerm();
 
@@ -396,9 +396,9 @@ function savePaycheckInfo(){
        selectedTerm.value=cookies.pIT;
        showTermOptions();
        showTermOptions();
-       if(cookies.PICe!=="none"&&cookies.pICf!=="none"){
+       if(cookies.PICe!=='none'&&cookies.pICf!=='none'){
        switch(cookies.pIT){
-        case "customDates":
+        case 'customDates':
             document.getElementById('customTermDatesStartDate').value=cookies.pICf;
             document.getElementById('customTermDatesEndDate').value=cookies.pICe;
         break;
@@ -413,8 +413,8 @@ function savePaycheckInfo(){
        subscriptionAmount.value=cookies.pISCu || 0;
        updateSubscriptionFields();
        if(cookies.pISCu>0){
-        let namesOfSubs=cookies.pISN.split("|");
-        let costsOfSubs=cookies.pISCs.split("|");
+        let namesOfSubs=cookies.pISN.split('|');
+        let costsOfSubs=cookies.pISCs.split('|');
         for(let i=0;i<cookies.pISCu;i++){
             let curName=document.getElementById(`subscriptionName${i+1}`);
             let curAmount=document.getElementById(`subscriptionCost${i+1}`);
@@ -445,15 +445,15 @@ function savePaycheckInfo(){
 function updateDailyRemaining(){
     //balance input cookie
     console.log('updating');
-    document.cookie="baI="+balanceInput.value.trim()+"; max-age=31536000; path=/; SameSite=Lax; domain=" + currentIp;
-    if(cookies.baI!==undefined && cookies.baI!==null && cookies.baI!==""){
+    document.cookie='baI='+balanceInput.value.trim()+'; max-age=31536000; path=/; SameSite=Lax; domain=' + currentIp;
+    if(cookies.baI!==undefined && cookies.baI!==null && cookies.baI!==''){
     balanceInput.placeholder=cookies.baI;
     } else {
         balanceInput.placeholder='Input balance';
     }
     let amountToSubtract;
     let projectedBlnce;
-    if(parseInt(cookies.rID)!==NaN&&parseInt(cookies.rID)!=='NaN'&&cookies.rID!=='Fill everything out!'&&cookies.rID!==""){
+    if(parseInt(cookies.rID)!==NaN&&parseInt(cookies.rID)!=='NaN'&&cookies.rID!=='Fill everything out!'&&cookies.rID!==''){
         console.log(parseInt(cookies.rID)!==NaN);
         console.log(parseInt(cookies.rID)!=='NaN');
         console.log(cookies.rID);
@@ -528,9 +528,9 @@ function redExpendFields(){
         return;
     }
     let redExpendNameRow=document.createElement('tr');
-    redExpendNameRow.id="redExpendNameRow";
+    redExpendNameRow.id='redExpendNameRow';
     let redExpendValueRow=document.createElement('tr');
-    redExpendValueRow.id="redExpendValueRow";
+    redExpendValueRow.id='redExpendValueRow';
     for(let i=0;i<numOfExpend;i++){
         let newRedExpendNameFieldCont=document.createElement('td');
         let newRedExpendValueFieldCont=document.createElement('td');
@@ -613,8 +613,8 @@ function saveRedCookies(){
     //expenditures
     document.cookie='rIEI='+redExpendInputs.value+'; domain='+currentIp+'; path=/; max-age=31536000; SameSite=Lax';
     //expenditure values
-    let expNames="";
-    let expValues="";
+    let expNames='';
+    let expValues='';
         for(let i=0; i<redExpendInputs.value; i++){
             let curExpName = document.getElementById(`redExpendName${i+1}`).value.trim();
             expNames+=curExpName+'|';
