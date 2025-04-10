@@ -1,6 +1,6 @@
 console.log('javascript running');
 console.log(document.title);
-let currentIp="192.168.1.242";
+let currentIp=".budgetgoose.xyz";
 //establishing cookies
 let cookies = document.cookie.split(';').reduce((cookies,cookie) => {
     let splitCookies=cookie.split('=');
