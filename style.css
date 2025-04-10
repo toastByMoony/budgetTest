@@ -496,7 +496,7 @@ width:70px;
     visibility: inherit;
 }
 
-#paycheckBody div:not(.subContainer){
+#paycheckBody div:not(.subContainer):not(#menuBackground){
     position:absolute;
 }
 
