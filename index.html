@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./Images/goes-removebg-preview.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta name="viewport" content="height=device-height, initial-scale=1.0">-->
+    </head> 
+    <body id="urfekinmom">
+        <h1>Welcome to the budget thingy</h1>
+
+<div id="indexSigns">
+    <div id="signDate">
+        <div id="indexTitleStuff">
+        <img src="./Images/title-images-removebg-preview.png">
+        <label for="dailyDate" class ="dateItem" id="dateTitleThing">Date:</label>
+        </div>
+
+            <br>
+
+        <div id="indexDateStuff">
+        <img src="Images/test-hanging-images-removebg-preview.png">
+        <input type=date id="dailyDate" class="dateItem">
+        </div>
+    </div>
+    <div id="signBalance">
+        <div id="balanceTitle">
+            <img src="./Images/title-images-removebg-preview.png">
+            <label for="balanceInputArea" class="indexItem" id="titleForBalance">Balance: </label>
+        </div>
+            <br>
+        <div id="balanceInfo">
+            <img src="./Images/test-hanging-images-removebg-preview.png">
+            <input type="number" placeholder="Balance!" id="balanceInputArea" class="indexItem">
+        </div>
+    </div>
+    <div id="purchaseShit">
+        <div id="purchaseTitle">
+            <img src="./Images/title-images-removebg-preview.png">
+            <label for="addPurch" class="indexItem" id="addPurchLabel">Add purchase: </label>
+        </div>
+        <br><br>
+        <div id="addPurchaseAmount">
+            <img src="./Images/top-single-hanging-images-removebg-preview.png">
+            <input id="addPurch" class="indexItem" type="number" placeholder="Amount">
+        </div>
+        <br>
+        <div id="addPurchaseButton">
+            <img src="./Images/bottom-single-hanging-images-removebg-preview.png" id="bottomSign">
+           <img src="./Images/Untitled_Project-removebg-preview.png" id="addPurchDoneButton">
+           
+        </div>
+    </div>
+    </div>
+
+    <div id="gooseBoy">
+        <img src="./Images/happyGoose.png" id="gooseBoySqrd">
+        <img src="./Images/BIGLY-beautiful-rustic-wooden-picture-ledges-rustic-cottagecore-watercolor-cozy-clipart_962764-68243-removebg-preview.png" id="gooseBoyShelf">
+        <img src="./Images/speechBubble-removebg-preview.png" id="gooseBoySpeechBubble">
+        <input id = 'dailyRemainder' readonly class="indexItem">
+        <img src="./Images/stickyNote.png" id="indexStickyNote" class="indexInfoStickyNote">
+        <textarea id="indexStickyNoteContent" class="indexInfoStickyNote">Found from original budget</textarea>
+
+        <div id="sadBubbleStuff">
+            <img src="./Images/thought-bubble-clipart-xl-removebg-preview.png" id="sadGooseBubble">
+            <div id="fullRedButton">
+            <img src="./Images/GREEN-removebg-preview.png" id="redistributeBackground">
+            <p id="sadGooseText">Redistribute...</p>
+            </div>
+            </div>
+            <div id="redButtonStickyStuff">
+            <img src="./Images/stickyNote.png" id="redistributionButtonSticky">
+            <textarea id="redButtonStickyText">Test</textarea>
+            </div>
+    </div>
+
+        <img src="./Images/BUTTON.png" id="menuButton">
+        <div id="menuBackground"></div>
+        <div id="bigMenuStuff">
+        <img src="./Images/woodenPanel.png" id="menuPanel">
+        <p id="menuPanelTitle">Options!</p>
+        <img src="./Images/AHHHH.png" id="menuXButton">
+        <div id="menuHomeButton" class="menuButtonThing">
+            <a href="./index.html" id="homeLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="homeButton">
+            <p id="homeButtonText">Home</p>
+            </a>
+        </div>
+        <div id="menuPaycheckButton" class="menuButtonThing">
+            <a href="./paycheckSheet.html" id="paycheckLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="paycheckButton">
+            <p id="paycheckButtonText">Paycheck Sheet</p>
+            </a>
+        </div>
+        <div id="menuRedistributionButton" class="menuButtonThing">
+            <a href="redistributionSheet.html" id="redistributionLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="redistributionButton">
+            <p id="redistributionButtonText">Redistribution sheet</p>
+            </a>
+        </div>
+        </div>
+        <script src="./code.js"></script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Re-distribution sheet</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./Images/goes-removebg-preview.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta name="viewport" content="height=device-height, initial-scale=1.0">-->
+    </head>
+    <body id="redBody">
+
+        <h3>Redistribution of stuff</h3>
+        <h4>Fill out the following fields to redistribute!</h4>
+        <div id="redInputs">
+        <div id="redInfoPopUp">
+        <label for="redDate">Date of change: </label>
+        <input type="date" id="redDate">
+        <button id="currentStandings">current</button>
+        <div id ="infoStuff"></div>
+        </div>
+        <label for="redTerm">Term: </label>
+            <select id="redTerm">
+                <optgroup label="Term options">
+                    <option value="auto">Auto</option>
+                    <option value="pickDate">Pick date</option>
+                    <option value="pickDay">Pick days</option>
+                </optgroup>
+                </select>
+                <br>
+                <div id="redTermInput">
+                </div>
+            <br>
+        <label for="redAmount">Starting amount: </label>
+        <input type="number" id="redAmount">
+        <br>
+        <label for="redExpendInputs">Add Any Anticipated Expenditures? </label>
+        <input id="redExpendInputs" type="Number">
+        <table id="redExpendFieldsContainer"></table>
+        <br><br>
+        </div>
+        <label for="redRemainingDisp">Remaining: </label>
+        <textarea id="redRemainingDisp" class="displayBox" readonly></textarea>
+        <br>
+        <label for="redDailyDisp">New daily: </label>
+        <textarea id="redDailyDisp" class="displayBox" readonly></textarea>
+        <br><br>
+        <button id="clearRedButton">CLEAR</button>
+
+
+        <img src="./Images/BUTTON.png" id="menuButton">
+        <div id="menuBackground"></div>
+        <div id="bigMenuStuff">
+        <img src="./Images/woodenPanel.png" id="menuPanel">
+        <p id="menuPanelTitle">Options!</p>
+        <img src="./Images/AHHHH.png" id="menuXButton">
+        <div id="menuHomeButton" class="menuButtonThing">
+            <a href="./index.html" id="homeLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="homeButton">
+            <p id="homeButtonText">Home</p>
+            </a>
+        </div>
+        <div id="menuPaycheckButton" class="menuButtonThing">
+            <a href="./paycheckSheet.html" id="paycheckLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="paycheckButton">
+            <p id="paycheckButtonText">Paycheck Sheet</p>
+            </a>
+        </div>
+        <div id="menuRedistributionButton" class="menuButtonThing">
+            <a href="redistributionSheet.html" id="redistributionLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="redistributionButton">
+            <p id="redistributionButtonText">Redistribution sheet</p>
+            </a>
+        </div>
+        </div>
+        <script src="./code.js"></script>
+    </body>
+</html>
