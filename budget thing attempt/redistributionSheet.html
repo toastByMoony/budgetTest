@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Re-distribution sheet</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./Images/goes-removebg-preview.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta name="viewport" content="height=device-height, initial-scale=1.0">-->
+    </head>
+    <body id="redBody">
+<div id="redTitleStuff">
+        <img src="./redistribution-stickies/title-thing-removebg-preview.png" id="redTitleSticky">
+        <h3 id="redH3">Redistribution of stuff</h3>
+        <h4 id="redH4">Fill out the following fields to redistribute!</h4>
+</div>
+        <div id="redInputs">
+<div id="redDateStuff">
+        <img src="./redistribution-stickies/red-start-date.png" id="redStartDateSticky">
+        <label for="redDate" id="redDateLabel">Date of change: </label>
+        <input type="date" id="redDate">
+</div>
+
+<div id="redCurrentButtonStuff">
+                <img src="./redistribution-stickies/pngtree-wood-game-button-png-image_4526878-removebg-preview.png" id="currentStandingsButton">
+                <p id="currentStandingsWord">Current</p>
+</div>
+
+<div id="redCurrentDetailsStuff">
+        <img src="./redistribution-stickies/term-setting.png" id="redCurrentInfoSticky" class="redCurrentDetail">
+        <div id ="infoStuff" class="redCurrentDetail"></div>
+</div>
+      
+<div id="redTermStuff">
+        <img src="./redistribution-stickies/term-option.png" id="redTermSelSticky">
+        <label for="redTerm" id="redTermLabel">Term</label>
+            <select id="redTerm">
+                <optgroup label="Term options">
+                    <option value="auto">Auto</option>
+                    <option value="pickDate">Pick date</option>
+                    <option value="pickDay">Pick days</option>
+                </optgroup>
+                </select>
+</div>
+<div id="redTermSettings">
+                <img src="./redistribution-stickies/red-current-details.png" id="redTermSetSticky">
+                <div id="redTermInput">
+                </div>
+</div>
+
+<div id="redAmountStuff">
+        <img src="./redistribution-stickies/starting-balance.png" id="redAmountSticky">
+        <label for="redAmount" id="redAmountLabel">Starting amount</label>
+        <input type="number" id="redAmount">
+</div>
+
+<div id="redExpendInputCount">
+        <img src="./redistribution-stickies/red-expend-input-count.png" id="redExpendAmountSticky">
+        <label for="redExpendInputs" id="redExpendInputsLabel">Add Any Anticipated Expenditures? </label>
+        <input id="redExpendInputs" type="Number">
+</div>
+
+<div id="redExpendFieldsStuff">
+
+</div>
+
+        </div>
+<div id="redEndStuff">
+        <img src="./redistribution-stickies/red-end-stuff.png" id="redEndStuffSticky">
+        <img src="./WebsiteStickies/funderline.png" id="redUnderline">
+        <img src="./Images/360_F_478704479_admkBRfZ7bAbJ70CSiJm98Pcxivj3jW1-removebg-preview.png" id="redCircle">
+        <label for="redRemainingDisp" id="redRemainingDispLabel">Remaining: </label>
+        <textarea id="redRemainingDisp" class="displayBox" readonly></textarea>
+       
+        <label for="redDailyDisp" id="redDailyDispLabel">New daily: </label>
+        <input id="redDailyDisp" class="displayBox" readonly></input>
+</div>
+
+<div id="clearRedButton">
+        <img src="./redistribution-stickies/pngtree-wood-game-button-png-image_4526878-removebg-preview.png" id="redClearBackground">
+        <p id="redClearWord">Clear!</p>
+</div>
+
+
+        <img src="./Images/BUTTON.png" id="menuButton">
+        <div id="menuBackground"></div>
+        <div id="bigMenuStuff">
+                <a href="./advancedDistribution.html">
+                        <img src="./Images/button-two-holes.png" id="advancedButton">
+                        </a>
+        <img src="./Images/woodenPanel.png" id="menuPanel">
+        <p id="menuPanelTitle">Options!</p>
+        <img src="./Images/AHHHH.png" id="menuXButton">
+        <div id="menuHomeButton" class="menuButtonThing">
+            <a href="./index.html" id="homeLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="homeButton">
+            <p id="homeButtonText">Home</p>
+            </a>
+        </div>
+        <div id="menuPaycheckButton" class="menuButtonThing">
+            <a href="./paycheckSheet.html" id="paycheckLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="paycheckButton">
+            <p id="paycheckButtonText">Paycheck Sheet</p>
+            </a>
+        </div>
+        <div id="menuRedistributionButton" class="menuButtonThing">
+            <a href="redistributionSheet.html" id="redistributionLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="redistributionButton">
+            <p id="redistributionButtonText">Redistribution sheet</p>
+            </a>
+        </div>
+        </div>
+        <button id="saveButton">?</button>
+        <div id="saveOptions">
+                <button id="copyCode">Copy current save code</butotn>
+                <button id="inputCode">Import with save code</button>
+            </div>
+            <div id="notifBackground"></div>
+            <div id="notification"></div>
+        <script src="./code.js"></script>
+    </body>
+</html>

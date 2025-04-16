@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paycheck sheet</title>
+        <link rel = "stylesheet" href = "./style.css">
+        <link rel = 'icon' href = "./Images/goes-removebg-preview.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta name="viewport" content="height=device-height, initial-scale=1.0">-->
+    </head>
+    <body id="paycheckBody">
+        <div id="paycheckStyle">
+        <div id="payTitles">
+        <img src="./WebsiteStickies/download-removebg-preview (4).png" id="payTitlesSticky">
+        <h3>Paycheck processing</h3>
+        <h4>Please fill out the following:</h4>
+        </div>
+        <div id="paycheckInputs">
+
+            <div id="paycheckDateStuff">
+                <img src="./WebsiteStickies/blue clipped.png" id="paycheckDateSticky">
+                <label for="datePaid" id="datepaidLabel">Date: </label>
+                <input type="date" id="datePaid">
+            </div>
+            
+            <div id="paycheckAmountStuff">
+                <img src="./WebsiteStickies/blueDubTape.png" id="paycheckAmountSticky">
+                <label for="paidAmount" id="paidAmountLabel">Amount paid: </label>
+                <input type="number" id="paidAmount">
+            </div>
+            
+            <div id="paycheckTermSelStuff">
+                <img src="./WebsiteStickies/yellowClipped.png" id="paycheckTermSelSticky">
+                <label for="distributionTerm" id="distributionTermLabel">Term: </label>
+                    <select id="distributionTerm"> 
+                    <optgroup label = "Time periods">
+                        <option value = "twoWeeks">Two weeks</option>
+                        <option value = "customDates">Custom: dates</option>
+                        <option value = "customDays">Custom: days</option>
+                    </optgroup>
+                    </select>
+                </div>
+                
+            <div id="payTermSettings">
+                <img src="./WebsiteStickies/greenLined.png" id="payTermSetSticky">
+                <div id="startDate"></div>
+                <div id="customEnd"></div>
+            </div>
+            <div id="payLongTermSaveStuff">
+                <img src="./WebsiteStickies/blueTaped.png" id="payLongTermSticky">
+                <img src="./Images/360_F_478704479_admkBRfZ7bAbJ70CSiJm98Pcxivj3jW1-removebg-preview.png" id="longTermCircle">
+                <p id="longTermValueLabel">Long term savings</p>
+                <p id="longTermValue"></p>
+            </div>
+            <div id="payShortTermSaveStuff">
+                <img src="./WebsiteStickies/stickyNoteThingy.png" id="payShortTermsaveSticky">
+                <label for="shortTermSaveValue" id="shortTermSaveValueLabel">Short term savings: </label>
+               <input type="number" id="shortTermSaveValue">
+            </div>
+      
+         <div id="payDebtStuff">
+            <img src="./WebsiteStickies/blue clipped.png" id="payDebtSticky">
+                <label for="paycheckDebt" id="paycheckDebtLabel">Debt</label>
+                <input type="number" id="paycheckDebt">
+         </div>         
+            <div id="subscriptions">
+                <div id="subscriptionsTitle">
+                    <img src="./WebsiteStickies/stickyGreenWTape.png" id="subscriptionAmountSticky">
+                    <label for="subscriptionAmount" id="subscriptionAmountLabel">How many payments would you like to take out?</label>
+                    <input type="number" id="subscriptionAmount">
+                    </div>
+               <div id="subscriptionItems">
+                
+               </div>
+            </div>
+            <div id="payFunsies">
+                <img src="./WebsiteStickies/redStickyWTape.png" id="payFunsiesSticky">
+                <label for="funsiesSetAside" id="funsiesSetAsideLabel">Set aside for fun</label>
+                <input type="number" id="funsiesSetAside">
+            </div>
+          
+        </div>
+        
+        <div id="endPayStuff">
+            <img src="./WebsiteStickies/stripedBeige&Cream.png" id="endPaySticky">
+            <img src="./Images/360_F_478704479_admkBRfZ7bAbJ70CSiJm98Pcxivj3jW1-removebg-preview.png" id="payCircle">
+            <img src="./WebsiteStickies/funderline.png" id="dailyUnderline">
+            <p id="remainingFromPaycheckLabel">Remaining:</p>
+            <p id="remainingFromPaycheck"></p>
+       
+      
+            <p id="paycheckDailyLabel" id="paycheckDailyLabel">Daily: </p>
+            <p id="paycheckDaily"></p>
+        </div>
+
+        
+
+        
+        <img src="./Images/BUTTON.png" id="menuButton">
+        <div id="menuBackground"></div>
+        <div id="bigMenuStuff">
+            <a href="./advancedDistribution.html">
+                <img src="./Images/button-two-holes.png" id="advancedButton">
+                </a>
+        <img src="./Images/woodenPanel.png" id="menuPanel">
+        <p id="menuPanelTitle">Options!</p>
+        <img src="./Images/AHHHH.png" id="menuXButton">
+        <div id="menuHomeButton" class="menuButtonThing">
+            <a href="./index.html" id="homeLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="homeButton">
+            <p id="homeButtonText">Home</p>
+            </a>
+        </div>
+        <div id="menuPaycheckButton" class="menuButtonThing">
+            <a href="./paycheckSheet.html" id="paycheckLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="paycheckButton">
+            <p id="paycheckButtonText">Paycheck Sheet</p>
+            </a>
+        </div>
+        <div id="menuRedistributionButton" class="menuButtonThing">
+            <a href="redistributionSheet.html" id="redistributionLink" class="WHATTHEFUCK">
+            <img src="./Images/woodenButtons.png" id="redistributionButton">
+            <p id="redistributionButtonText">Redistribution sheet</p>
+            </a>
+        </div>
+        </div>
+        <button id="saveButton">?</button>
+        <div id="saveOptions">
+            <button id="copyCode">Copy current save code</butotn>
+            <button id="inputCode">Import with save code</button>
+        </div>
+        <div id="notifBackground"></div>
+        <div id="notification"></div>
+        <script src="./code.js"></script>
+    </body>
+</html>

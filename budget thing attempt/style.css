@@ -1,0 +1,1553 @@
+@font-face{
+    font-family: 'lofiCottage';
+    src: url(./Fonts/LoficottagefreeRegular-BW4O8.otf);
+}
+
+@font-face{
+    font-family: 'cottageCheese';
+    src: url(./Fonts/Cottagecheese-jEo8j.otf);
+}
+
+@font-face{
+    font-family: 'langbourne';
+    src:url('./Fonts/LangbourneDemo-owPDz.otf');
+}
+
+@font-face{
+    font-family:'tokiyoBrush';
+    src:url('./Fonts/TokiyoBrushBigPeriodThing.otf');
+}
+
+@keyframes menuFadeIn{
+    0% {right:-400px; opacity:0%;}
+    5% {right:-400px; opacity:100%;}
+    100%{right:37px; opacity:100%;}
+}
+
+@keyframes menuFadeOut {
+    0%{right:37px; opacity:100%;}
+    5% {right:37px; opacity:100%;}
+    100% {right:-400px; opacity:0%;}
+}
+
+.showSave{
+    animation-name:menuFadeIn;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+.hideSave{
+    animation-name: menuFadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+html a{
+    border-style: none;
+}
+
+body{
+    background-image: url(./Images/checkedBackground.jpg);
+} 
+
+h1{
+    text-align: center;
+    font-family: lofiCottage;
+}
+
+/*sign stuff*/
+
+#indexSigns{
+    display:flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap:wrap;
+}
+
+#indexDateStuff{
+    position:relative;
+    left:10px;
+    bottom:6px;
+    display:inline-block;
+    width: 118px;
+}
+
+#indexDateStuff img{
+    display: block;
+    width:100%;
+    height:auto;
+}
+
+#dailyDate{
+    position:absolute;
+    top:78%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-style: none;
+    background-color:transparent;
+    width:80px;
+    font-family: 'tokiyoBrush';
+    z-index: auto;
+}
+
+#indexTitleStuff{
+    position:relative;
+    display:inline-block;
+    width:138px;
+}
+
+#indexTitleStuff img{
+    display:block;
+    width:100%;
+    height:auto;
+    z-index:-1;
+}
+
+#dateTitleThing{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'cottageCheese';
+    font-size:x-large;
+}
+
+#signBalance{
+    position: relative;
+    display:inline-block;
+    width:138px;
+    height: 34px;
+}
+
+#signBalance img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+#titleForBalance{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-family:'cottageCheese';
+    font-size:x-large;
+}
+
+#balanceInfo{
+    position:relative;
+    width:118px;
+}
+
+#balanceInfo img{
+    display:block;
+    width:100%;
+    height:auto;
+    position:relative;
+    left:10px;
+    bottom:19px;
+}
+
+#balanceInputArea{
+    position:absolute;
+    top: 58%;
+    left:60%;
+    transform: translate(-50%,-50%);
+    font-family: 'tokiyoBrush';
+    font-size:large;
+    border-style: none;
+    background-color: transparent;
+    width:80px;
+    text-align:center;
+}
+
+#purchaseShit{
+    position:relative;
+    display: inline-block;
+    width:150px;
+}
+
+#purchaseTitle{
+    position: relative;
+    display: inline-block;
+   width:150px;
+    height:34px;
+}
+
+#purchaseTitle img{
+    display:block;
+    width:100%;
+    height:34px;
+    position:relative;
+}
+
+#addPurchLabel{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'cottageCheese';
+    font-size:large;
+}
+
+#addPurchaseAmount{
+    display:block;
+    width: 118px;
+    height: 75px;
+}
+
+#addPurchaseAmount img{
+    display:block;
+    width: 118px;
+    height: 75px;
+    position: relative;
+    bottom:23px;
+    left:15px;
+}
+
+#addPurch{
+    position: absolute;
+    bottom:43%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 70px;
+    border-style:none;
+    background-color: transparent;
+    font-family:'tokiyoBrush';
+    z-index: auto;
+    text-align: center;
+}
+
+#addPurchaseButton{
+    display:inline-block;
+    position:relative;
+    width:118px;
+    height: 50px;
+}
+
+#addPurchaseButton > #bottomSign{
+    display:block;
+    position:relative;
+    left:13%;
+    bottom:82%;
+    width:100%;
+    height:auto;
+}
+
+#addPurchaseButton>#addPurchDoneButton{
+    display:block;
+    position:absolute;
+    left:63%;
+    bottom:72%;
+    transform: translate(-50%,-50%);
+    width:80px;
+    height:20px;
+}
+
+#addPurchaseButton button{
+    background-color: transparent;
+    width:fit-content;
+    height:fit-content;
+    border-style:none;
+}
+#gooseBoy{
+    position:relative;
+    left:50%;
+    transform: translate(-50%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:150px;
+    width:480px;
+}
+
+#gooseBoySqrd{
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    bottom:25%;
+    z-index:100;
+}
+
+#gooseBoyShelf {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    bottom:-10%;
+}
+
+#gooseBoySpeechBubble{
+    position: absolute;
+    background-color: transparent;
+    width:160px;
+    height:70px;
+    left:10%;
+    bottom:97%;
+}
+
+#dailyRemainder{
+    background-color: transparent;
+    position:absolute;
+    bottom: 114%;
+    left:12.5%;
+    width: 128px;
+    text-align: center;
+    font-family: 'tokiyoBrush';
+    font-size:17px;
+    border-style: none;
+}
+
+#indexStickyNote{
+    position:relative;
+    width:80px;
+    height: auto;
+    right:15%;
+    bottom:35%;
+}
+#indexStickyNoteContent{
+    width:62px;
+    height:50px;
+    position:relative;
+    right:29%;
+    bottom:34.5%;
+    font-family: 'tokiyoBrush';
+    font-size:small;
+    border-style: none;
+    background-color: transparent;
+}
+
+.indexInfoStickyNote{
+    visibility: hidden;
+}
+
+#saveButton{
+    position:fixed;
+    bottom:10px;
+    right:5px;
+    border-radius:100px;
+    font-family:'tokiyoBrush';
+    font-size:x-large;
+    width:30px;
+    height:30px;
+    text-align:center;
+    border-style:dashed;
+    background-color:rgba(242, 236, 225, 0.7);
+}
+
+#saveOptions{
+    background-color:lightgrey;
+    border-style:dotted black;
+    width:303px;
+    position:fixed;
+    bottom:15px;
+    right:37px;
+}
+
+#saveOptions :hover{
+    color:seagreen;
+}
+
+#menuButton{
+    position:fixed;
+    right:10px;
+    top:10px;
+    width:48.46px;
+}
+
+#menuPanel{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform: translate(-50%,50%);
+    height:230px;
+    width:190px;
+}
+
+
+
+#homeButton{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(-50%,10px);
+    z-index: 99;
+}
+#homeButtonText{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    z-index:100;
+    transform:translate(-50%,33px);
+    font-family:'tokiyoBrush';
+    color:rgb(242, 184, 114);
+    font-size:x-large;
+}
+#homeLink{
+    position:fixed;
+    left:0;
+    bottom:0;
+    z-index:0;
+}
+
+#paycheckButton{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(-50%,50px);
+}
+#paycheckButtonText{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(-50%,60px);
+    font-family:'tokiyoBrush';
+    color:rgb(242, 184, 114);
+}
+#paycheckLink{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+}
+
+#redistributionButton{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform: translate(-50%,90px);
+}
+#redistributionButtonText{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(-50%,100px);
+    font-family:'tokiyoBrush';
+    color:rgb(242, 184, 114);
+}
+#redistributionLink{
+    position:fixed;
+    left:0px;
+    bottom:0px;
+}
+
+#menuPanelTitle{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(-50%,-10px);
+    font-family:'tokiyoBrush';
+    color:rgb(79, 46, 2);
+    font-size:xx-large;
+}
+
+#menuBackground{
+    border-style: solid;
+    background-color:black;
+    opacity:50%;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:110vw;
+    height:110vh;
+}
+
+#menuXButton{
+    width:40px;
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(50px, -80px) rotate(15deg);
+}
+
+#advancedButton{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(58px,-45px);
+    z-index: 999999;
+    width:30px;
+}
+
+#sadBubbleStuff{
+    position:absolute;
+    left:48%;
+    bottom:65%;
+    border-style: none;
+    width:100px;
+    height:100px;
+}
+
+#sadGooseBubble{
+    background-color: transparent;
+    position: absolute;
+    height:60px;
+    width:120px;
+    left:20%;
+    bottom:50%;
+}
+
+#sadGooseText{
+    position:absolute;
+    z-index:100;
+    background-color:transparent;
+    left:59%;
+    bottom:54%;
+    font-size:15px;
+    font-family:'tokiyoBrush';
+    letter-spacing:normal;
+    border-style:none;
+    cursor:pointer;
+}
+
+#redistributeBackground{
+    position:absolute;
+    z-index: 99;
+    width:80px;
+    left:50%;
+    bottom:66%;
+}
+
+#redButtonStickyStuff{
+position:relative;
+bottom:30%;
+left:4%;
+transform:rotate(-15deg);
+border-style: none;
+width:70px;
+height:70px;
+align-items: center;
+}
+
+#redistributionButtonSticky{
+position:absolute;
+width:70px;
+}
+
+#redButtonStickyText{
+    position:absolute;
+    left:13%;
+    top:20%;
+    width:50px;
+    height:50px;
+    font-family: 'tokiyoBrush';
+    background-color:transparent;
+    font-size: 12px;
+    border-style: none;
+    overflow: hidden;
+}
+
+
+
+#paycheckBody img{
+    visibility: inherit;
+}
+
+#paycheckBody div:not(.subContainer):not(#menuBackground){
+    position:absolute;
+}
+
+#payTitles{
+    visibility:visible;
+    position:relative;
+    left:5px;
+    top:5px;
+    width:350px;
+    height:140px;
+}
+
+#payTitlesSticky{
+    position: absolute;
+    bottom:-80%;
+    left:20%;
+    width:180px;
+    transform: rotate(-95deg);
+}
+
+#payTitles h3{
+    position:absolute;
+    left: 35px;
+    top:0%;
+    transform: rotate(-5deg);
+    font-family: 'tokiyoBrush';
+    font-size:xx-large;
+    color:rgb(56, 38, 7);
+}
+
+#payTitles h4{
+    position:absolute;
+    left: 40px;
+    top: 40%;
+    transform: rotate(-10deg);
+    font-family:'tokiyoBrush';
+    font-size:larger;
+    letter-spacing: 1.5px;
+    color:rgb(56, 38, 7);
+}
+
+#paycheckDateStuff{
+    visibility: visible;
+    top:160px;
+    left:20px;
+    width:130px;
+    height:140px;
+    transform:rotate(15deg);
+}
+
+#paycheckDateSticky{
+    position:absolute;
+}
+
+#datepaidLabel{
+    position:absolute;
+    top:30%;
+    left:38%;
+    transform:rotate(-5deg);
+    font-family:'tokiyoBrush';
+    text-decoration:underline;
+    font-size:large;
+    color:rgb(43, 30, 7);
+}
+
+#datePaid{
+    position:absolute;
+    top:55%;
+    left:9%;
+    background-color: transparent;
+    font-family:'tokiyoBrush';
+    border-style: dotted;
+    border-color: black;
+    border-radius:5px;
+    color:rgb(43, 30, 7);
+    width:95px;
+    height:16px;
+}
+
+#paycheckAmountStuff{
+    visibility:visible;
+    width:150px;
+    height:150px;
+    top:200px;
+    left:150px;
+    transform:rotate(-20deg);
+}
+
+#paycheckAmountSticky{
+    position:absolute;
+}
+
+#paidAmountLabel{
+    position:absolute;
+    left:25%;
+    top:28%;
+    font-family:'tokiyoBrush';
+}
+
+#paidAmount{
+    position:absolute;
+    left:20%;
+    top:48%;
+    width: 80px;
+    font-family:'tokiyoBrush';
+    color:rgb(43, 30, 7);
+    letter-spacing: 1px;
+    background-color:transparent;
+    border:none;
+    border-bottom:dashed rgb(43, 30, 7) 2px;
+}
+
+#paycheckTermSelStuff{
+    visibility:visible;
+    width:120px;
+    height:120px;   
+    top:330px;
+    left:210px;
+    transform:rotate(10deg);
+}
+
+#paycheckTermSelsticky{
+    position:absolute;
+    left:0px;
+    bottom:0px;
+}
+
+#distributionTermLabel{
+    position:absolute;
+    bottom:60px;
+    left: 35px;
+    font-family: 'tokiyoBrush';
+    font-size:large;
+}
+
+#distributionTerm{
+    position:absolute;
+    bottom:35px;
+    left:7px;
+    width:100px;
+    font-family:'tokiyoBrush';
+    color:black;
+    background-color: transparent;
+    border-style:none;
+    border-bottom:dashed black;
+}
+
+#payTermSettings{
+    transform:rotate(-15deg);
+    visibility: visible;
+    width:148px;
+    height:200px;
+    top:300px;
+    left:20px;
+  
+}
+
+#payTermSetSticky{
+    position:relative;
+    left:0px;
+    bottom:3px;
+    width:148px;
+    height:200px;
+}
+
+#startDate{
+    border-color:transparent;
+    height:20px;
+    width:148px;
+    position:absolute;
+    top:45px;
+}
+
+#startDate label{
+    border-style:none;
+    width:70px;
+    border-bottom:solid;
+    display:block;
+    position: absolute;
+    left:24px;
+    bottom:8px;
+    font-family: 'tokiyoBrush';
+    font-size:large;
+    color:black;
+}
+
+#startDate input{
+    display:block;
+    position:absolute;
+    top:19px;
+    left:25px;
+    border-style:none;
+    border-bottom:dashed black;
+    border-color:black;
+    background-color: transparent;
+    width:98px;
+    font-family:'tokiyoBrush';
+    color:black;
+}
+
+#customEnd{
+    border-color:transparent;
+    position:absolute;
+    top:150px;
+}
+
+#customEnd label{
+    position:absolute;
+    bottom:13px;
+    left:22px;
+    border-style:none;
+    border-bottom:solid;
+    border-color:black;
+    background-color:transparent;
+    font-family:'tokiyoBrush';
+    font-size:large;
+    color:black;
+    width:100px;
+}
+
+#customEnd input{
+    position:absolute;
+    left:27px;
+    bottom:-13px;
+    background-color: transparent;
+    border-style:none;
+    border-bottom: dashed black;
+    width:98px;
+    height:20px;
+    font-family:'tokiyoBrush';
+    color:black;
+
+}
+
+#payLongTermSaveStuff{
+    visibility: visible;
+    top:480px;
+    width:140px;
+    height:170px;
+    transform:rotate(-15deg);
+}
+
+#payLongTermSticky{
+    position:absolute;
+}
+
+#longTermValueLabel{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    color:black;
+    top:40px;
+    left:28px;
+    border-style:none;
+    border-bottom:solid;
+    border-color:black;
+}
+
+#longTermValue{
+    position:absolute;
+    top:70px;
+    left:50px;
+    font-family:'tokiyoBrush';
+    font-size:x-large;
+    color:black;
+    transform:rotate(-15deg);
+    border-style:none;
+    width:50px;
+    text-align:center;
+}
+
+#longTermCircle{
+    position:absolute;
+    width:90px;
+    height: 70px;
+    top:70px;
+    left:30px;
+    transform:rotate(-10deg);
+}
+
+#payShortTermSaveStuff{
+    visibility: visible;
+    top:450px;
+    left:160px;
+    width:136px;
+    height:134px;
+    transform: rotate(15deg);
+}
+
+#payShortTermsaveSticky{
+    position:absolute;
+    left:-20px;
+    width:180px;
+    transform:rotate(10deg);
+}
+
+#shortTermSaveValueLabel{
+    position:absolute;
+    left:15px;
+    top:30px;
+    font-family:'tokiyoBrush';
+    border-style:none;
+    border-bottom: solid;
+}
+
+#shortTermSaveValue{
+    position:absolute;
+    top:70px;
+    left:30px;
+    background-color: transparent;
+    border-style:none;
+    border-bottom:dashed black;
+    font-family: 'tokiyoBrush';
+    font-size:larger;
+    color:black;
+    width:70px;
+    text-align: left;
+}
+
+#payDebtStuff{
+    visibility:visible;
+    top:570px;
+    left:135px;
+    width:125px;
+    height:145px;
+    transform:rotate(10deg);
+}
+
+#payDebtSticky{
+    position: absolute;
+}
+
+#paycheckDebtLabel{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    border-style:none;
+    border-bottom:solid;
+    top:35px;
+    left:45px;
+    font-size:larger;
+    transform:rotate(-5deg);
+}
+
+#paycheckDebt{
+    position:absolute;
+    top:70px;
+    left:25px;
+    width:70px;
+    background-color: transparent;
+    border-style:none;
+    border-bottom:dashed black;
+    font-family:'tokiyoBrush';
+    font-size:large;
+    color:black;
+}
+
+#subscriptionsTitle{
+    visibility:visible;
+    top:550px;
+    left:260px;
+    width:190px;
+    height:200px;
+    transform:rotate(-15deg);
+}
+
+#subscriptionAmountSticky{
+    width:180px;
+    height:200px;
+    position:absolute;
+}
+
+#subscriptionAmountLabel{
+    position:absolute;
+    font-family: 'tokiyoBrush';
+    left:60px;
+    top:53px;
+    width:110px;
+    border-style:none;
+    border-bottom:dotted black;
+}
+
+#subscriptionAmount{
+    position:absolute;
+    top:130px;
+    left:70px;
+    font-family:'tokiyoBrush';
+    background-color:transparent;
+    color:black;
+    border-style: none;
+    border-bottom:dashed black;
+    font-size:large;
+    width: 80px;
+}
+
+#subscriptionItems{
+    display:flex;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    gap:5px;
+    visibility: visible;
+    height:180px;
+    width:100vw;
+    top:730px;
+}
+/*
+#subscriptionItems div{
+    border-style:none;
+    display:flex;
+    width:155px;
+    height:180px;
+    background-color: transparent;
+}
+*/
+.subContainer{
+    position:relative;
+    width:155px;
+    height:180px;
+    border-style:none;
+    flex: 0 0 auto;
+}
+
+.subContainer img{
+    width:150px;
+    height:150px;
+    position:absolute;
+}
+
+.subContainer input[type=text]{
+    position:absolute;
+    top:60px;
+    left:15px;
+    width:110px;
+    background-color:transparent;
+    font-family:'tokiyoBrush';
+    font-size:large;
+    color:black;
+    border-style:none;
+    border-bottom:dashed black;
+}
+
+.subContainer input[type=text]::placeholder{
+    font-size:medium;
+}
+
+.subContainer input[type=number]{
+    position:absolute;
+    top:100px;
+    left:20px;
+    background-color: transparent;
+    border-style:none;
+    border-bottom:dashed;
+    border-color:black;
+    font-family:'tokiyoBrush';
+    font-size:large;
+    color:black;
+    width:100px;
+}
+
+.subContainer input[type=number]::placeholder{
+    font-size:medium;
+}
+
+#payFunsies{
+    visibility: visible;
+    width:138px;
+    height:150px;
+    top:550px;
+    left:450px;
+    transform:rotate(10deg);
+}
+
+#payFunsiesSticky{
+    transform:rotate(-11deg);
+    position:absolute;
+}
+
+#funsiesSetAsideLabel{
+    position:absolute;
+    top:50px;
+    left:20px;
+    font-family:'tokiyoBrush';
+    border-style:none;
+    border-bottom:solid;
+}
+
+#funsiesSetAside{
+    position:absolute;
+    top:80px;
+    left:40px;
+    width:50px;
+    font-family:'tokiyoBrush';
+    color:black;
+    font-size:large;
+    border-style:none;
+    border-bottom: dashed black;
+    background-color: transparent;
+}
+
+#endPayStuff{
+    visibility: visible;
+    position:relative;
+    border-style:none;
+    width:210px;
+    height:220px;
+    top:300px;
+    left:360px;
+}
+
+#endPaySticky{
+    visibility: visible;
+    position:absolute;
+    width:200px;
+}
+
+#remainingFromPaycheckLabel{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    font-size:x-large;
+    border-style:none;
+    border-bottom: solid;
+    top:52px;
+    left:20px;
+}
+
+#remainingFromPaycheck{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    font-size:larger;
+    color:black;
+    left:123px;
+    top:60px;
+    transform:rotate(-15deg);
+    border-style: none;
+    width:50px;
+    text-align:center;
+}
+
+#payCircle{
+    position:absolute;
+    width:120px;
+    left:87px;
+    top:50px;
+    transform:rotate(-15deg);
+}
+
+#dailyUnderline{
+    position:absolute;
+    top:155px;
+    left:75px;
+    width:100px;
+}
+
+#paycheckDailyLabel{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    font-size:x-large;
+    top:110px;
+    left:23px;
+    border-style:none;
+    border-bottom:solid;
+}
+
+#paycheckDaily{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    top:122px;
+    left:70px;
+    transform:rotate(-3deg);
+    border-style:none;
+    width:100px;
+    height:20px;
+    text-align:center;
+    overflow-x:visible;
+}
+
+#redBody div:not(#redInputs):not(#menuBackground):not(.redSubItem){
+    position:absolute;
+}
+
+#redTitleStuff{
+    width:270px;
+    height:85px;
+}
+
+#redTitleSticky{
+    width:270px;
+    position:absolute;
+}
+
+#redH3{
+    position:absolute;
+    left:40px;
+    font-family:'tokiyoBrush';
+    font-size:x-large;
+}
+
+#redH4{
+    position:absolute;
+    top:37px;
+    left:40px;
+    transform:rotate(-2deg);
+    font-family:'tokiyoBrush';
+    font-size:small;
+}
+
+#redDateStuff{
+    width:111px;
+    height:113px;
+    top:90px;
+    left:20px;
+    transform:rotate(-10deg);
+}
+
+#redStartDateSticky{
+    position:absolute;
+}
+
+#redDateLabel{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    top:30px;
+    left:12px;
+    text-decoration: underline;
+}
+
+#redDate{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    top:55px;
+    border-style:none;
+    background-color:transparent;
+    left:10px;
+    border-bottom:dashed black;
+    color:black;
+}
+
+#redCurrentButtonStuff{
+    height:50px;
+    width:130px;
+    visibility:visible;
+    cursor:pointer;
+    left:140px;
+    top:110px;
+    transform:rotate(15deg);
+}
+
+#currentStandingsButton{
+    border-style:none;
+    width:130px;
+    position:absolute;
+    cursor:pointer;
+}
+
+#currentStandingsWord{
+    border-style:none;
+    position:absolute;
+    font-family:'tokiyoBrush';
+    font-size:x-large;
+    left:35px;
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+
+#redCurrentDetailsStuff{
+    width:210px;
+    height:220px;
+    left:240px;
+    transform:rotate(-15deg);
+    z-index: 9999;
+    border-style:dashed;
+}
+
+#redCurrentInfoSticky{
+    position:absolute;
+    width:210px;
+    height:220px;
+}
+
+#infoStuff{
+    border-color:transparent;
+    font-family:'tokiyoBrush';
+    /*line-height:4px;*/
+    position:absolute;
+    left:40px;
+    top:26px;
+}
+
+#redTermStuff{
+    width:140px;
+    height:120px;
+    top:60px;
+    left:270px;
+    transform:rotate(7deg);
+}
+
+#redTermSelSticky{
+    width:140px;
+    height:120px;
+    position:absolute;
+}
+
+#redTermLabel{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    font-size:xx-large;
+    text-decoration: underline;
+    top:25px;
+    left:35px;
+}
+
+#redTerm{
+    position:absolute;
+    background-color:transparent;
+    border-style:none;
+    border-bottom:dashed black;
+    font-family:'tokiyoBrush';
+    top:70px;
+    left:30px;
+}
+
+#redTermSettings{
+    width:180px;
+    height:170px;
+    left:240px;
+    top:160px;
+    transform:rotate(-5deg);
+}
+
+#redTermSetSticky{
+    position:absolute;
+    width:190px;
+}
+
+#redTermInput{
+    position:absolute;
+    top:55px;
+    left:32px;
+    width:133px;
+    height:50px;
+    font-family:'tokiyoBrush';
+    font-size:large;
+    text-align:center;
+    text-decoration:underline;
+    line-height:30px;
+    border-color:transparent;
+    color:black;
+}
+
+#redTermInput input{
+    font-family:'tokiyoBrush';
+    background-color: transparent;
+    border-style:none;
+    border-bottom:dashed black;
+}
+
+#redAmountStuff{
+    width:150px;
+    height:140px;
+    top:200px;
+    left:80px;
+    transform:rotate(-15deg);
+}
+
+#redAmountSticky{
+    position:absolute;
+    width:150px;
+}
+
+#redAmountLabel{
+    position:absolute;
+    top:33px;
+    left:20px;
+    font-family:'tokiyoBrush';
+    font-size:large;
+    text-decoration:underline;
+}
+
+#redAmount{
+    position:absolute;
+    top:60px;
+    left:15px;
+    background-color:transparent;
+    border-style:none;
+    border-bottom:dashed black;
+    font-family:'tokiyoBrush';
+    color:black;
+    text-align: center;
+}
+
+#redExpendInputCount{
+    width:160px;
+    height:150px;
+    left:0px;
+    top:350px;
+}
+
+#redExpendAmountSticky{
+    width:160px;
+    position:absolute;
+}
+
+#redExpendInputsLabel{
+    position:absolute;
+    top:33px;
+    font-family:'tokiyoBrush';
+    text-decoration:underline;
+    left:0px;
+    text-align:center;
+}
+
+#redExpendInputs{
+    position:absolute;
+    top:85px;
+    left:23px;
+    background-color: transparent;
+    border-style:none;
+    border-bottom:dashed;
+    font-family:'tokiyoBrush';
+}
+
+#redEndStuff{
+width:220px;
+height:220px;
+top:280px;
+left:180px;
+transform:rotate(-10deg);
+}
+
+#redEndStuffSticky{
+    position:absolute;
+    width:220px;
+    height:220px;
+}
+
+#redRemainingDispLabel{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    font-size:20px;
+    top:104px;
+    left:30px;
+}
+
+#redRemainingDisp{
+    position:absolute;
+    top:102px;
+    left:110px;
+    font-family:'tokiyoBrush';
+    width:87px;
+    height:15px;
+    overflow-y:hidden;
+    transform:rotate(-5deg);
+    background-color:transparent;
+    border-style:none;
+    text-align:center;
+}
+
+#redUnderline{
+    position:absolute;
+    width:94px;
+    top:116px;
+    left:112px;
+    transform:rotate(-5deg);
+}
+
+#redDailyDispLabel{
+    position: absolute;
+    top:150px;
+    left:35px;
+    font-family:'tokiyoBrush';
+    font-size:large;
+}
+
+#redDailyDisp{
+    position:absolute;
+    font-size:larger;
+    left:105px;
+    top:140px;
+    font-family:'tokiyoBrush';
+    background-color:transparent;
+    text-align:center;
+    width:80px;
+    height:15px;
+    padding-top:7.5px;
+    transform:rotate(-2deg);
+    border-style:none;
+    cursor:default;
+}
+
+#redCircle{
+    position:absolute;
+    width:140px;
+    top:110px;
+    left:78px;
+}
+
+#clearRedButton{
+height:50px;
+width:140px;
+top:640px;
+}
+
+#redClearBackground{
+width:140px;
+position:absolute;
+cursor:pointer;
+}
+
+#redClearWord{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    left:37px;
+    top:-22px;
+    font-size:xx-large;
+    cursor:pointer;
+}
+
+#redExpendFieldsStuff{
+display:flex;
+height:150px;
+width:100vw;
+gap:2px;
+flex-direction: row;
+left:0px;
+top:480px;
+}
+
+.redSubItem{
+    width:140px;
+    height:150px;
+    flex:0 0 auto;
+}
+
+.redSubItem img{
+    width:140px;
+    position:absolute;
+}
+
+.redSubItem input[type='text']{
+    position:absolute;
+    font-family:'tokiyoBrush';
+    top:55px;
+    width:90px;
+    left:23px;
+    background-color:transparent;
+    border-style:none;
+    border-bottom:dashed black;
+    color:black;
+    text-align: center;
+}
+
+.redSubItem input[type='number']{
+    position:absolute;
+    font-family: 'tokiyoBrush';
+    top: 88px;
+    left:20px;
+    width:90px;
+    background-color:transparent;
+    border-style:none;
+    border-bottom:dashed black;
+    color:black;
+    text-align:center;
+}
+
+.redSubItem input[type="text"]::placeholder{
+    font-size:x-small;
+}
+
+.redSubItem input[type="number"]::placeholder{
+    font-size:x-small;
+}
+
+#notification{
+    position:fixed;
+    left:50%;
+    bottom:50%;
+    transform:translate(-50%,50%);
+    width:150px;
+    height:60px;
+    border-style:solid;
+    border-radius: 5px;
+    background-color:beige;
+    font-family:'tokiyoBrush';
+    font-size:medium;
+}
+
+#notification textarea{
+    border-style: none;
+    background-color: transparent;
+}
+
+#cookieCodeDisplay{
+    width:150px;
+    height:30px;
+}
+
+#codeInput{
+    width:142px;
+    height:30px;
+}
+
+#notifBackground{
+    position:fixed;
+    left:-5px;
+    top:-5px;
+    width:110vw;
+    height:110vh;
+    opacity:50%;
+    background-color: black;
+}
