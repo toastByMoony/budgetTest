@@ -666,10 +666,10 @@ function updateDailyRemaining(){
         dailyRemainder.value= ahRemainder+' remaining today!';
     }
 
-    if(ahRemainder>=5){
+    if(ahRemainder>parseInt(cookies.pIDI)*.1){
         gooseBoySqrd.src=happyGoose;
         hideThought();
-    } else if(ahRemainder<5&&ahRemainder>0){
+    } else if(ahRemainder<=parseInt(cookies.pIDI)*.1&&ahRemainder>0){
         gooseBoySqrd.src=scaredGoose;
         hideThought();
     } else if(ahRemainder<=0){
